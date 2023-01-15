@@ -13,7 +13,7 @@ const StyledItemBoxDiv = styled.div`
 
 const ListPage = () => {
   const [post, setPost] = useState({
-    id: '',
+    id: 5,
     title: '',
     content: '',
   });
@@ -29,7 +29,8 @@ const ListPage = () => {
   const handleWrite = (e) => {
     e.preventDefault(); // form태그가 하려는 액션을 중지시켜야 함
     // ListPage의 setPosts에 담아야 함
-    setPosts([...posts, post]);
+    setPosts([...posts, { ...post, id: post.id + 1 }]);
+    setPost({ ...post, id: post.id + 1 });
   };
 
   // const handleChangeTitle = (e) => {
