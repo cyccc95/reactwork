@@ -53,6 +53,10 @@ const ListPage = () => {
     // console.log(post.content);
   };
 
+  const handleDelete = (id) => {
+    setPosts(posts.filter((post) => post.id !== id));
+  };
+
   return (
     <div>
       <h1>리스트 페이지</h1>
@@ -79,7 +83,13 @@ const ListPage = () => {
           <div>
             번호 : {post.id} / 제목 : {post.title} / 내용 : {post.content}
           </div>
-          <button>삭제</button>
+          <button
+            onClick={() => {
+              handleDelete(post.id);
+            }}
+          >
+            삭제
+          </button>
         </StyledItemBoxDiv>
       ))}
     </div>
