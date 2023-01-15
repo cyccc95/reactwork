@@ -1,34 +1,23 @@
-import { createRef, useRef, useState } from 'react';
+import './App.css';
+// import styled from 'styled-components';
+import { Title } from './MyCss';
 
-// useRef (디자인)
-// dom을 변경할 때 사용
+const a = {
+  backgroundColor: 'red',
+};
+
+// const Title = styled.h1`
+//   font-size: 1.5em;
+//   text-align: center;
+//   color: palevioletred;
+// `;
+
 function App() {
-  const myRef = useRef(null);
-
-  const [list, setList] = useState([
-    { id: 1, name: '길동' },
-    { id: 2, name: '꺽정' },
-  ]);
-
-  const myRefs = Array.from({ length: list.length }).map(() => createRef());
-
   return (
     <div>
-      <button
-        onClick={() => {
-          console.log(myRef);
-          console.log(myRef.current);
-          // myRef.current.style.backgroundColor = 'red';
-          myRefs[0].current.style.backgroundColor = 'red';
-          myRefs[1].current.style.backgroundColor = 'blue';
-        }}
-      >
-        색 변경
-      </button>
-      <div ref={myRef}>박스</div>
-      {list.map((user, index) => (
-        <h1 ref={myRefs[index]}>{user.name}</h1>
-      ))}
+      <div style={a}>안녕</div>
+      <div className="box-style">헬로</div>
+      <Title>잘가</Title>
     </div>
   );
 }
