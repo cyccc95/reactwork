@@ -1,8 +1,7 @@
-// useRef (디자인)
-// dom을 변경할 때 사용
-
 import { createRef, useRef, useState } from 'react';
 
+// useRef (디자인)
+// dom을 변경할 때 사용
 function App() {
   const myRef = useRef(null);
 
