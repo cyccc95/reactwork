@@ -1,11 +1,22 @@
-import ListPage from './pages/ListPage';
+import './App.css';
+import React from 'react';
+import Top from './components/Top';
+import Bottom from './components/Bottom';
+import { useState } from 'react';
 
-// 글쓰기, 글삭제, 글목록보기
 function App() {
+  const [number, setNumber] = useState(1);
+
+  const addNumber = () => {
+    setNumber(number + 1);
+  };
+
   return (
-    <>
-      <ListPage />
-    </>
+    <div className="container">
+      <h1>최상단 화면</h1>
+      <Top number={number} />
+      <Bottom addNumber={addNumber} />
+    </div>
   );
 }
 
