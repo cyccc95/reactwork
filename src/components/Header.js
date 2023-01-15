@@ -1,5 +1,6 @@
 // rsc로 자동완성
 import React from 'react';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -18,16 +19,33 @@ const StyledHeaderLink = styled(Link)`
 
 const Header = () => {
   return (
-    <StyledHeaderDiv backgroundColor="blue">
-      <ul>
-        <li>
-          <StyledHeaderLink to="/">홈</StyledHeaderLink>
-        </li>
-        <li>
-          <StyledHeaderLink to="/login/10">로그인</StyledHeaderLink>
-        </li>
-      </ul>
-    </StyledHeaderDiv>
+    <>
+      <StyledHeaderDiv backgroundColor="blue">
+        <ul>
+          <li>
+            <StyledHeaderLink to="/">홈</StyledHeaderLink>
+          </li>
+          <li>
+            <StyledHeaderLink to="/login/10">로그인</StyledHeaderLink>
+          </li>
+        </ul>
+      </StyledHeaderDiv>
+      <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Nav className="me-auto">
+            <Link to="/" className="nav-link">
+              홈
+            </Link>
+            {/* <Nav.Link href="/">Home</Nav.Link> */}
+            <Link to="/login" className="nav-link">
+              로그인
+            </Link>
+            {/* <Nav.Link href="#features">Features</Nav.Link> */}
+          </Nav>
+        </Container>
+      </Navbar>
+    </>
   );
 };
 
