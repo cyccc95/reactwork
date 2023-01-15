@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+# reactwork
+https://cyccc95.notion.site/reactwork-1cda71619f194c65ac3a0565861d8d13
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -69,6 +71,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# reactwork
->>>>>>> 4875f142dfbe528489c5f032cc214dbfadee3eba
