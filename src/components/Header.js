@@ -11,15 +11,20 @@ const StyledHeaderDiv = styled.div`
   background-color: ${(props) => props.backgroundColor};
 `;
 
+const StyledHeaderLink = styled(Link)`
+  // styled에 없는 것은 상속해서 사용
+  color: red;
+`;
+
 const Header = () => {
   return (
     <StyledHeaderDiv backgroundColor="blue">
       <ul>
         <li>
-          <Link to="/">홈</Link>
+          <StyledHeaderLink to="/">홈</StyledHeaderLink>
         </li>
         <li>
-          <Link to="/login/10">로그인</Link>
+          <StyledHeaderLink to="/login/10">로그인</StyledHeaderLink>
         </li>
       </ul>
     </StyledHeaderDiv>
